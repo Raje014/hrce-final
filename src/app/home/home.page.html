@@ -1,20 +1,81 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header class="header">
+  <ion-toolbar class="dashboard-header">
+
+    <div class="header-left">
+      <div class="system-title">
+        Temple Locations
+      </div>
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-button class="logout-btn" (click)="logout()">Logout</ion-button>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+
+  <!-- SEARCH -->
+  <div class="search-container">
+
+    <input
+      [(ngModel)]="searchText"
+      (input)="onSearchInput(); formatTempleCode()"
+      placeholder="Enter Temple Name or Code"
+      class="search-input"
+    />
+
+    <!-- CLEAR -->
+    <span *ngIf="searchText" class="clear-btn" (click)="clearSearch()">✖</span>
+
+    <!-- SUGGESTIONS -->
+    <div *ngIf="suggestions.length > 0" class="dropdown">
+
+      <div
+        *ngFor="let item of suggestions"
+        class="item"
+        (click)="selectSuggestion(item)"
+      >
+        <div class="title">{{ item.temple_name }}</div>
+        <div class="sub">{{ item.templeid }}</div>
+      </div>
+
+    </div>
+
   </div>
+
+  <!-- SELECTED -->
+  <div *ngIf="selectedTemple" class="info">
+    Temple Name: {{ selectedTemple.temple_name }}
+  </div>
+
+  <!-- MAP -->
+  <div id="map"></div>
+
 </ion-content>
+
+<div class="captcha-overlay" *ngIf="pendingTemple"></div>
+
+<div *ngIf="pendingTemple" class="captcha-box">
+
+    <span class="close-btn" (click)="closeForm()">✖</span>
+
+  <div class="captcha-code">
+    {{ captchaText }}
+  </div>
+
+  <input
+    [(ngModel)]="userCaptcha"
+    placeholder="Enter Captcha"
+    class="captcha-input"
+  />
+
+  <button (click)="verifyCaptcha()">
+    Verify
+  </button>
+
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,87 @@
+<ion-header class="custom-header">
+
+  <div class="top-blue-bar"></div>
+
+  <div class="main-header">
+
+    <div class="logo-section">
+      <a href="https://hrce.tn.gov.in" target="_blank">
+        <img
+          src="assets/icon/logo.png"
+          class="logo"
+        />
+      </a>
+      <p class="text">THIRUKOVIL</p>
+
+      <div class="title-section">
+        <h3>Government of Tamil Nadu</h3>
+        <h2>Hindu Religious & Charitable Endowments Department</h2>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="nav-bar">
+    <button (click)="home()" class="active-nav"> Home </button>
+    <button (click)="about()"> About </button>
+    <button (click)="contact()"> Contact </button>
+    <button class="btn-login" (click)="toggleLoginMenu()"> Login</button>
+  </div>
+
+</ion-header>
+
+
+<ion-content id="main-content">
+
+  <!-- LOGIN DROPDOWN -->
+  <div *ngIf="showLoginMenu"
+      class="dropdown-backdrop"
+      (click)="closeLoginMenu()">
+
+    <!-- dropdown -->
+    <div class="content-dropdown-overlay"
+        (click)="$event.stopPropagation()">
+
+      <app-login-dropdown
+        (loginSelected)="openLogin($any($event))">
+      </app-login-dropdown>
+
+    </div>
+  </div>
+
+    <section class="hero">
+      <div class="map-image">
+        <img src="assets/icon/map_route.jpeg" alt="Map Route">
+      </div>
+
+      <div class="hero-text">
+
+        <h2>Hindu Religious & Charitable Endowments Department</h2>
+
+        <p class="hrce-description">
+          The Hindu Religious and Charitable Endowments Department manages temple
+          administration, preserves cultural heritage, and ensures proper governance
+          of temples across Tamil Nadu. This portal supports temple location updates,
+          jurisdiction-based approvals, and public access to temple information.
+          It enables authorized officials and sub users to update temple records
+          through a secure approval workflow integrated with GIS-based location mapping.
+          The system also helps devotees and public users easily search temples,
+          view location details <a class="read-more-btn" (click)="about()">Read More</a>
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- LOGIN MODAL -->
+    <div class="login-overlay" *ngIf="showLogin">
+      <div class="login-dropdown">
+        <app-public-login *ngIf="loginType === 'Public'" (close)="closeLogin()"></app-public-login>
+        <app-official-login *ngIf="loginType === 'Official'" (close)="closeLogin()"></app-official-login>
+      </div>
+    </div>
+
+</ion-content>
+
+<app-footer></app-footer>

@@ -1,0 +1,55 @@
+<ion-header class="header">
+  <ion-toolbar class="dashboard-header">
+
+    <div class="header-left">
+      <div class="system-title">
+        Temple Locations
+      </div>
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-button class="btn-user" (click)="createUser()">
+        Create User
+      </ion-button>
+      <ion-button class="btn-logout" (click)="logout()">Logout</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- FILTER -->
+  <div class="filter-bar">
+    <button (click)="setFilter('all')" [class.active]="filter==='all'">All</button>
+    <button (click)="setFilter('update')" [class.active]="filter==='update'">Updated Temples</button>
+    <button (click)="setFilter('add')" [class.active]="filter==='add'">Newly Added Temples</button>
+    <button (click)="viewStatus()"> View Status </button>
+  </div>
+
+  <!-- MAP -->
+  <div id="map"></div>
+
+  <div class="list">
+
+  <table class="simple-table">
+
+    <tr class="table-head">
+      <th>Locations Approval Pending</th>
+    </tr>
+
+    <tr *ngFor="let r of filteredData" (click)="focus(r)">
+      <td>
+        {{r.temple_id}} - {{r.temple_name}} ({{r.request_type}})
+      </td>
+    </tr>
+
+    <tr *ngIf="filteredData.length === 0">
+        <p class="no-data">No Data Available</p>
+    </tr>
+
+  </table>
+
+</div>
+
+</ion-content>
+

@@ -1,0 +1,88 @@
+<ion-header class="header">
+  <ion-toolbar class="dashboard-header">
+
+    <div class="header-left">
+      <div class="system-title">
+        Temple Location Update
+      </div>
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-button class="back-btn" (click)="goBack()">Back</ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="login-body">
+    <div class="form-card">
+
+      <!-- USERNAME -->
+      <div class="input-group">
+        <input 
+          class="native-input" 
+          (input)="formatUsername"
+          type="text"
+          placeholder="Username"
+          [(ngModel)]="username" />
+      </div>
+
+      <!-- PASSWORD -->
+      <div class="input-group">
+        <input class="native-input"
+          type="password"
+          placeholder="Password"
+          [(ngModel)]="password"/>
+      </div>
+
+      <!-- JURISDICTION -->
+      <div class="input-group">
+    
+        <div class="input-group jurisdiction-group">
+
+          <input
+            class="native-input"
+            type="text"
+            placeholder="Select Jurisdiction"
+            [(ngModel)]="officeSearch"
+            (focus)="showDropdown = true"
+            (input)="filterOffices()"
+          />
+          <div class="chips">
+            <span class="chip" *ngFor="let o of selectedOffices">
+              {{ o.office_name }}
+              <span class="remove" (click)="removeOffice(o)">✖</span>
+            </span>
+          </div>
+
+          <!-- DROPDOWN -->
+          <div class="dropdown" *ngIf="showDropdown && filteredOffices.length">
+
+            <div
+              class="item"
+              *ngFor="let o of filteredOffices"
+              (click)="selectOffice(o)"
+            >
+              {{ o.office_name }}
+            </div>
+
+          </div>
+
+        </div>
+    </div>
+
+    <!-- CREATE ACCOUNT -->
+    <ion-button expand="block"
+      (click)="createAccount()">
+      Create Account
+    </ion-button>
+    <div class="message">{{ message }}</div>
+
+  </div>
+</div>
+
+</ion-content>
+
+<app-footer></app-footer>

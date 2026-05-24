@@ -1,0 +1,427 @@
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .dashboard-header {
+    --background: #1e73be;
+    color: #fff;
+    height: 60px;
+  }
+
+  .header{
+    background-color: #1e73be;
+    // padding-top: 20px;
+  }
+
+  ion-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-left: 8px;
+    max-width:75%;
+    overflow: hidden;
+  }
+
+  .system-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+  }
+  
+  .contact-container {
+    padding: 0px 10px;
+    background: #f5f7fa;
+    min-height: unset;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  ion-content{
+    --background: #f5f7fa;
+    background-color: white;
+    height: 100%;
+  }
+
+  .contact-header {
+    background: #1976d2;
+    color: white;
+    padding: 14px;
+    margin-top: 40px;
+    border-radius: 10px 10px 0 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .contact-card {
+    background: white;
+    padding: 16px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+
+  .contact-card h2 {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.7;
+    color: black;
+  }
+
+  .contact-card p,
+  .contact-row {
+    font-size: 14px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+    color: black;
+  }
+
+  .label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+    color: black;
+  }
+
+  .visitor-time h3 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: black;
+  }
+
+  ion-buttons{
+    padding-right: 20px;
+  }
+
+  .back-btn{
+    background-color: white;
+    color: #1565c0;
+    padding: 5px 12px;
+    border-radius:8px ;
+    font-weight: bold;
+    text-transform: none;
+    text-align: center;
+  }
+}
+
+
+/* ================= TABLET ================= */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .dashboard-header {
+    --background: #1e73be;
+    color: #fff;
+    min-height: 50px;
+  }
+
+  .header{
+    background-color: #1e73be;
+  }
+
+  ion-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-left: 8px;
+    max-width:75%;
+    overflow: hidden;
+  }
+
+  .system-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+  }
+
+  .contact-container {
+    padding: 20px;
+    background: #f5f7fa;
+    min-height: unset;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .contact-header {
+    background: #1976d2;
+    color: white;
+    padding: 16px 20px;
+    border-radius: 12px 12px 0 0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .contact-card {
+    background: white;
+    padding: 20px;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .contact-card h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+  }
+
+  .contact-row,
+  .contact-card p {
+    font-size: 18px;
+    line-height: 1.4;
+    color: black;
+  }
+
+  .label {
+    font-weight: 600;
+    color: black;
+  }
+
+  .visitor-time h3 {
+    font-size: 22px;
+    color: black;
+  }
+
+  .time-highlight {
+    font-size: 20px;
+    font-weight: 700;
+    color: #8e3b68;
+  }
+
+  
+  ion-buttons{
+    padding-right: 20px;
+  }
+
+  .back-btn{
+    background-color: white;
+    color: #1565c0;
+    border-radius:8px ;
+    text-align: center;
+    font-weight: bold;
+    text-transform: none;
+  }
+
+}
+
+
+/* ================= LAPTOP ================= */
+@media (min-width: 1024px) and (max-width: 1440px) {
+
+  .dashboard-header {
+    --background: #1e73be;
+    color: #fff;
+    min-height: 50px;
+  }
+
+  .header{
+    background-color: #1e73be;
+  }
+
+  ion-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-left: 8px;
+    max-width:75%;
+    overflow: hidden;
+  }
+
+  .system-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+  }
+
+  .contact-container {
+    padding: 30px;
+    background: #f5f7fa;
+    min-height: unset;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .contact-header {
+    background: #1976d2;
+    color: white;
+    padding: 18px 25px;
+    border-radius: 12px 12px 0 0;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .contact-card {
+    background: white;
+    padding: 10px 20px;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .contact-card h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+  }
+
+  .contact-row,
+  .contact-card p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: black;
+  }
+
+  .label {
+    font-weight: 600;
+    color: black;
+  }
+
+  .visitor-time h3 {
+    font-size: 20px;
+    color: black;
+  }
+
+  
+  ion-buttons{
+    padding-right: 20px;
+  }
+
+  .back-btn{
+    background-color: white;
+    color: #1565c0;
+    border-radius:8px ;
+    font-weight: bold;
+    text-align: center;
+    text-transform: none;
+  }
+
+}
+
+
+/* ================= LARGE SCREEN ================= */
+@media (min-width: 1440px) {
+
+  .dashboard-header {
+    --background: #1e73be;
+    color: #fff;
+    min-height: 50px;
+  }
+
+  .header{
+    background-color: #1e73be;
+  }
+
+  ion-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-left: 8px;
+    max-width:75%;
+    overflow: hidden;
+  }
+
+  .system-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+  }
+
+  .contact-container {
+    padding: 40px;
+    background: #f5f7fa;
+    min-height: unset;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .contact-header {
+    background: #1976d2;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 12px 12px 0 0;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .contact-card {
+    background: white;
+    padding: 35px;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .contact-card h2 {
+    font-size: 30px;
+    color: black;
+  }
+
+  .contact-row,
+  .contact-card p {
+    color: black;
+    font-size: 22px;
+    line-height: 1.8;
+  }
+
+  .label {
+    font-weight: 600;
+    color: black;
+  }
+
+  .visitor-time h3 {
+    font-size: 26px;
+    color: black;
+  }
+
+  .time-highlight {
+    font-size: 24px;
+    font-weight: 700;
+    color: #8e3b68;
+  }
+
+  
+  ion-buttons{
+    padding-right: 20px;
+  }
+
+  .back-btn{
+    background-color: white;
+    color: #1565c0;
+    border-radius:8px ;
+    text-align: center;
+    font-weight: bold;
+    text-transform: none;
+  }
+
+}

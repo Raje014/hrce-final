@@ -34,4 +34,67 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+// @import '@ionic/angular/css/palettes/dark.system.css';
+
+// leaflet css
+@import "leaflet/dist/leaflet.css";
+
+:root {
+  --ion-font-family: 'Poppins', sans-serif;
+}
+
+.popup-box {
+  min-width: 180px;
+  padding: 8px;
+  font-family: Arial, sans-serif;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.popup-box b {
+  font-size: 13px;
+  color: #222;
+}
+
+.popup-box small {
+  font-size: 12px;
+  color: #666;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.popup-box button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 6px 12px;
+  margin-right: 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+/* Approve */
+.popup-box .btn-approve {
+  background: #28a745;
+  color: white;
+}
+
+.popup-box .btn-approve:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Reject */
+.popup-box .btn-reject {
+  background: #dc3545;
+  color: white;
+}
+
+.popup-box .btn-reject:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+

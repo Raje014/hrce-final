@@ -1,0 +1,483 @@
+@media (max-width: 768px) {
+
+  ion-content {
+   --background: #f5f5f5;
+   background-color: white;
+   height: 100%;
+  }
+
+  ion-title {
+    font-size: 16px;
+  }
+
+  .dashboard-header {
+    --background:  #1e73be;
+    color: white;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+  }
+
+  .header {
+   background:  #1e73be;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .system-title {
+    color: white;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+ .login-body {
+    padding: 0;
+  }
+
+  .input-group {
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 20px;
+  }
+
+  .login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 34px 24px 28px;
+    border-radius: 18px;
+    gap: 22px;
+    box-shadow: none;
+  }
+ 
+  .login-title {
+    top: 16px;
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  .profile-content{
+   --padding-bottom: 80px;
+   padding-bottom: 50px;
+  }
+
+  .profile-wrapper {
+    min-height: auto;
+    display: block;              
+    justify-content: flex-start;   
+    padding: 12px 16px;
+    align-items: stretch;         
+    padding-bottom: 20px;
+  }
+
+  .profile-form-card {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-sizing: border-box;
+    margin-top: 200px;
+  }
+
+  .native-input {
+    height: 50px;
+    width: 340px;
+    // margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+    background: #f9fafb;
+    color: #111827;
+    margin-bottom: 20px;
+  }
+
+  .cancel-btn {
+    --background: white;
+    --color: #2563eb;
+    background-color: white;
+    color: #2563eb;
+    border-radius: 10px;
+    text-transform: none;
+    padding: 5px; 
+  }
+
+  .create-btn{
+    background-color: #1565c0;
+    color: #fff;
+    text-align: center;
+  }
+
+  .native-input:focus {
+    border-color: #2563eb;
+  }
+
+  .native-input::placeholder {
+    color: #6b7280;
+  }
+
+  ion-button {
+    --background:  #1565c0;
+    --color: white;
+    --border-radius: 10px;
+    height: 46px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 15px;
+    margin-right: 25px;
+  }  
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  ion-content {
+    --background: #f5f5f5;
+  }
+
+  .dashboard-header {
+    --background:  #1e73be;
+    color: white;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+  }
+
+  .header {
+    background:  #1e73be;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .system-title {
+    color: white;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .cancel-btn {
+    background-color: white;
+    color:#1e73be;
+    font-weight: 600;
+    margin-left: 8px;
+    text-transform: none;
+  }
+
+  .profile-form-card {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .input-group {
+    width: 100%;
+  }
+
+  .native-input {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: #f9fafb;
+    color: #111827;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .native-input:focus {
+    border-color: #2563eb;
+  }
+
+  .native-input::placeholder {
+    color: #6b7280;
+  }
+
+  ion-button {
+    --background: #16a34a;
+    --color: white;
+    --border-radius: 10px;
+    height: 46px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 6px;
+    text-transform: uppercase;
+  }
+
+   .profile-form-card {
+    max-width: 550px;
+    padding: 24px;
+  }
+  .profile-wrapper {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.create-btn{
+    background-color: white;
+    color:#1e73be;
+    text-align: center;
+    width:460px;
+    padding: 20px;
+    border-radius: 6px;
+  }
+
+
+  .native-input {
+    height: 48px;
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+
+  ion-button {
+    height: 46px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+
+  ion-content {
+    --background: #f5f5f5;
+  }
+
+  .dashboard-header {
+    --background:  #1e73be;
+    color: white;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+  }
+
+  .header {
+    background:  #1e73be;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .system-title {
+    color: white;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .cancel-btn {
+    background-color: white;
+    color:#1e73be;
+    font-weight: 600;
+    text-transform: none;
+    border-radius: 12px;
+  }
+
+  .create-btn{
+    color: #fff;
+    text-align: center;
+    width:610px;
+    padding: 20px;
+    border-radius: 6px;
+  }
+
+  .profile-form-card {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-sizing: border-box;
+    margin-top: 0px;
+    max-width: 400px;
+    padding: 28px;
+    margin-bottom: 70px;
+  }
+
+  .profile-wrapper {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .input-group {
+    width: 100%;
+  }
+
+  .native-input {
+    width: 100%;
+    padding: 0 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: #f9fafb;
+    color: #111827;
+    outline: none;
+    box-sizing: border-box;
+    height: 50px;
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+
+  .native-input:focus {
+    border-color: #2563eb;
+  }
+
+  .native-input::placeholder {
+    color: #6b7280;
+  }
+
+  ion-button {
+    --background: #1e73be;
+    --color: white;
+    --border-radius: 10px;
+    height: 48px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  ion-button {
+    height: 40px;
+    font-size: 16px;
+    border-radius: 12px;
+  }
+
+}
+
+@media (min-width: 1440px) {
+
+  ion-content {
+    --background: #f5f5f5;
+  }
+
+  .dashboard-header {
+    --background:  #1e73be;
+    color: white;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+  }
+
+  .header {
+    background:  #1e73be;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .system-title {
+    color: white;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .cancel-btn {
+    color:white;
+    font-weight: 600;
+    margin-left: 8px;
+    text-transform: none;
+    background-color:#16a34a;
+  }
+
+  .profile-form-card {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .input-group {
+    width: 100%;
+  }
+
+  .native-input {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: #f9fafb;
+    color: #111827;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .native-input:focus {
+    border-color: #2563eb;
+  }
+
+  .native-input::placeholder {
+    color: #6b7280;
+  }
+
+  ion-button {
+    --background: #16a34a;
+    --color: white;
+    --border-radius: 10px;
+    height: 46px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 6px;
+    text-transform: uppercase;
+  }
+
+  
+  .profile-form-card {
+    max-width: 850px;
+    padding: 32px;
+  }
+
+  .native-input {
+    height: 52px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .profile-wrapper {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  ion-button {
+    height: 50px;
+    font-size: 16px;
+    border-radius: 12px;
+  }
+
+}

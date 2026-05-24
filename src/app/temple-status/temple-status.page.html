@@ -1,0 +1,60 @@
+<ion-header class="header">
+  <ion-toolbar class="dashboard-header">
+
+    <div class="header-left">
+      <div class="system-title">
+        Temple Locations
+      </div>
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-button class="btn-back" (click)="goBack()">Back</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- FILTER -->
+  <div class="filter-bar">
+    <button (click)="setStatus('all')" [class.active]="statusFilter==='all'">All</button>
+    <button (click)="setStatus('pending')" [class.active]="statusFilter==='pending'">Pending</button>
+    <button (click)="setStatus('approved')" [class.active]="statusFilter==='approved'">Approved</button>
+    <button (click)="setStatus('rejected')" [class.active]="statusFilter==='rejected'">Rejected</button>
+  </div>
+
+  <!-- MAP -->
+  <div id="map-status"></div>
+  
+  <div class="list"> 
+    <table class="simple-table">
+
+      <tr class="table-head">
+        <th>Status</th>
+      </tr>
+
+      <tr *ngFor="let t of paginatedTemples" 
+      class="card"
+      (click)="focusTemple(t)">
+        <td>
+          <p class="temple-name">
+            {{ t.temple_id }} - {{ t.temple_name }}
+          </p> 
+          <p class="office-name">
+            {{ t.off_shortcd }} ({{ t.dist_name }})
+          </p>
+          <br>
+          <span [ngClass]="'status ' + t.status">
+            {{ t.status }}
+          </span>
+        </td>
+      </tr>
+
+      <tr *ngIf="paginatedTemples.length === 0">
+          <p class="no-data">No Data Available</p>
+      </tr>
+  </table>
+  </div>
+
+</ion-content>
+

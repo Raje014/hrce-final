@@ -1,0 +1,111 @@
+<ion-header class="header">
+  <ion-toolbar class="dashboard-header">
+
+    <div class="header-left">
+      <div class="system-title">
+        Temple Location
+      </div>
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-button class="btn-logout" (click)="logout()">
+        Logout
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div class="search-container">
+
+    <div class="search-box">
+
+      <input
+        [(ngModel)]="searchText"
+        (input)="onSearchInput(); formatTempleCode()"
+        placeholder="Enter Temple Name or Code"
+        class="search-input"
+      />
+
+      <span
+        *ngIf="searchText?.trim()"
+        class="clear-btn"
+        (click)="clearSearch()">
+
+        ✖
+
+      </span>
+
+    </div>
+
+    <!-- DROPDOWN -->
+    <div *ngIf="suggestions.length > 0" class="dropdown">
+
+      <div
+        *ngFor="let item of suggestions"
+        class="item"
+        (click)="selectSuggestion(item)">
+
+        <div class="title">{{ item.temple_name }}</div>
+        <div class="sub">{{ item.templeid }}</div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- SELECTED TEMPLE -->
+  <div *ngIf="selectedTemple" class="info">
+    Temple Name: {{ selectedTemple.temple_name }}
+  </div>
+
+  <!-- ACTION BUTTONS -->
+  <div class="action-buttons">
+
+    <!-- ADD -->
+    <button class="add-btn" (click)="addNewTemple()"> Add </button>
+
+    <!-- ADD GPS / UPDATE GPS -->
+    <ion-button
+      *ngIf="selectedTemple"
+      (click)="startUpdateGPS()"
+      [disabled]="!selectedTemple?.office_code || selectedTemple.office_code !== userOffice">
+      {{ hasLocation ? 'Update GPS' : 'Add GPS' }}
+    </ion-button>
+
+    <!-- MOVE MARKER -->
+    <ion-button
+      *ngIf="isAdding"
+      [disabled]="!templeMarker"
+      [color]="isMoving ? 'danger' : 'primary'"
+      (click)="toggleMove()">
+      {{ isMoving ? 'Stop Move' : 'Move Marker' }}
+    </ion-button>
+
+    <!-- UPDATE MOVE -->
+    <ion-button
+      *ngIf="isUpdatingGPS"
+      (click)="toggleUpdateMove()"
+      [color]="isUpdateMoving ? 'danger' : 'primary'">
+      {{ isUpdateMoving ? 'Stop Move' : 'Move Marker' }}
+    </ion-button>
+  </div>
+
+  <!-- MAP -->
+  <div id="map"></div>
+
+</ion-content>
+
+<!-- FORM -->
+<app-temple-form
+  *ngIf="showForm"
+  [formData]="formData"
+  (close)="onCloseForm()"
+  (submitForm)="onSubmitForm($event)">
+</app-temple-form>
+
+<app-footer></app-footer>

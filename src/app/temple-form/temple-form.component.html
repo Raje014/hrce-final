@@ -1,0 +1,75 @@
+<div class="form-overlay">
+
+  <div class="form-box">
+
+    <!-- CLOSE BUTTON -->
+    <span class="close-btn" (click)="closeForm()">✖</span>
+
+    <h3>Temple Details</h3>
+
+    <form #templeForm="ngForm" (ngSubmit)="submitFormFn(templeForm)">
+
+      <!-- TEMPLE ID -->
+      <div class="input-group">
+        <input
+          type="text"
+          name="temple_id"
+          [(ngModel)]="formData.temple_id"
+          (input)="formatTempleId()"
+          placeholder="Temple ID"
+          maxlength="9"
+          required
+        />
+        <input
+          type="text"
+          name="temple_name"
+          [(ngModel)]="formData.temple_name"
+          placeholder="Temple Name"
+          required 
+        />
+        <input
+          type="text"
+          name="district"
+          [(ngModel)]="formData.district"
+          placeholder="District" 
+          required 
+        />
+        <input
+          type="text"
+          name="taluk"
+          [(ngModel)]="formData.taluk"
+          placeholder="Taluk" 
+          required 
+        />
+        <input
+          type="text"
+          name="village"
+          [(ngModel)]="formData.village"
+          placeholder="Village" 
+          required 
+        />
+        <input
+          type="text"
+          name="latitude"
+          [(ngModel)]="formData.latitude"
+          placeholder="Latitude"
+          readonly 
+        />
+        <input
+          type="text"
+          name="longitude"
+          [(ngModel)]="formData.longitude"
+          placeholder="Longitude"
+          readonly 
+        />
+      </div>
+
+      <!-- SUBMIT -->
+      <button type="submit" class="submit-btn">
+        Submit
+      </button>
+
+    </form>
+
+  </div>
+</div>

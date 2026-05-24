@@ -1,0 +1,52 @@
+<ion-header class="header">
+  <ion-toolbar class="dashboard-header">
+
+      <div class="header-left">
+
+        <div class="system-title">
+          Create Sub-Users
+        </div>
+      </div>
+
+    <ion-buttons slot="end">
+      <ion-button class="cancel-btn" (click)="goBack()">
+        Cancel
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="profile-content" >
+
+  <div class="profile-wrapper">
+    <div class="profile-form-card">
+
+      <!-- USERNAME -->
+      <div class="input-group">
+        <input
+          class="native-input"
+          type="text"
+          (input)="formatUsername()"
+          [(ngModel)]="newUsername"
+          placeholder="Enter Username"
+        />
+        <input
+          class="native-input"
+          type="password"
+          [(ngModel)]="newPassword"
+          placeholder="Enter Password"
+        />
+      </div>
+
+      <!-- CREATE BUTTON -->
+      <ion-button expand="block" fill="solid" (click)="createUser()">
+        <div class ="create-btn">
+        Create User</div>
+      </ion-button>
+
+    </div>
+  </div>
+
+</ion-content>
+
+<app-footer></app-footer>

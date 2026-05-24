@@ -1,0 +1,26 @@
+<div class="login-body">
+  <div class="login-card">
+
+    <div class="login-title">
+      Public Login
+    </div>
+
+    <div class="close-btn" (click)="close.emit()">
+      ×
+    </div>
+
+    <div class="input-group">
+      <input
+        class="native-input"
+        type="text"
+        [(ngModel)]="username"
+        placeholder="Enter Username"
+      />
+    </div>
+
+    <ion-button expand="block" fill="solid" (click)="login()">
+      Login
+    </ion-button>
+
+  </div>
+</div>

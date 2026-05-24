@@ -1,0 +1,491 @@
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .designed-strip {
+    position: fixed;
+    bottom: 50px;   /* exactly above footer */
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: #d8dadb;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8px;
+    font-weight: 600;
+    color: black;
+    z-index: 998;
+  }
+
+  .designed-strip p {
+    margin: 0;
+  }
+
+  .left {
+    flex: 1;
+  }
+
+  .center {
+    flex: 1;
+    text-align: center;
+    color: black;
+  }
+
+  .icon-right {
+    flex: 1;
+    display: flex;
+    gap: 6px;
+    flex-direction: row;
+    align-items: flex-end; 
+    justify-content:end;
+    padding-right: 10px;
+    padding-bottom: 5px;
+  }
+
+  .icon-right button {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: none;
+    background:white;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-right button:hover {
+    background: grey;
+  }
+  
+  .icon-right button span {
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .footer {
+    height: 50px;
+    padding: 0 8px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #1e73be;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    z-index: 999;
+  }
+
+  .footer-left {
+    flex: 1;
+  }
+
+  .footer-center {
+    flex: 1;
+    text-align: center;
+    color: white;
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  .footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .dev-text {
+    color: white;
+    font-size: 10px;
+    line-height: 1;
+    margin-top: 25px;
+    padding-right: 10px;
+  }
+
+  .nic-logo {
+    width: 130px;
+    height: 110px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .itms-logo{
+    padding-top: 10px;
+    width:80px;
+    height: 70px;
+  }
+
+}
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .designed-strip {
+    position: fixed;
+    bottom: 50px;   /* exactly above footer */
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: #d8dadb;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: black;
+    z-index: 998;
+  }
+
+  .designed-strip p {
+    margin: 0;
+  }
+
+  .left {
+    flex: 1;
+  }
+
+  .center {
+    flex: 1;
+    text-align: center;
+    color: black;
+  }
+
+  .icon-right {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: flex-end; 
+    justify-content:end;
+    padding-right: 10px;
+  }
+
+  .icon-right button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    background:white;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-right button:hover {
+    background: grey;
+  }
+  
+  .icon-right button span {
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #1e73be;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-sizing: border-box;
+    z-index: 999;
+  }
+
+  .footer-left {
+    flex: 1;
+  }
+
+  .footer-center {
+    flex: 1;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .dev-text {
+    color: white;
+    font-size: 16px;
+    line-height: 1;
+    margin-top: 35px;
+    padding-right: 30px;
+  }
+
+  .nic-logo {
+    width: 220px;
+    height: 120px;
+    padding-top: 35px;
+    padding-bottom: 30px;
+  }
+
+  .itms-logo{
+    padding-top: 10px;
+    width:100px;
+    height: 70px;
+  }
+}
+
+/* LAPTOP */
+@media (min-width: 1024px) and (max-width: 1440px) {
+
+  .designed-strip {
+    position: fixed;
+    bottom: 50px;  
+    left: 0;
+    width: 100%;
+    height: 32px;
+    background: #d8dadb;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    z-index: 998;
+  }
+
+  .designed-strip p {
+    margin: 0;
+  }
+
+  .left {
+    flex: 1;
+  }
+
+  .center {
+    flex: 1;
+    text-align: center;
+    color: black;
+  }
+
+  .icon-right {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: flex-end; 
+    justify-content:end;
+    padding-right: 10px;
+  }
+
+  .icon-right button {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    background:white;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-right button:hover {
+    background: grey;
+  }
+
+  .icon-right button span {
+    font-size: 17px;
+    font-weight: 400;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #1e73be;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-sizing: border-box;
+    z-index: 999;
+  }
+
+  .footer-left {
+    flex: 1;
+  }
+
+  .footer-center {
+    flex: 1;
+    text-align: center;
+    color: white;
+  }
+
+  .footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .dev-text {
+    color: white;
+    font-size: 16px;
+    line-height: 1;
+    margin-top: 35px;
+    padding-right: 33px;
+  }
+
+  .nic-logo {
+    width: 200px;
+    height: 68px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .itms-logo{
+    padding-top: 10px;
+    width:100px;
+    height: 70px;
+  }
+}
+
+/* LARGE SCREEN */
+@media (min-width: 1440px) {
+
+  .designed-strip {
+    position: fixed;
+    bottom: 50px;   
+    left: 0;
+    width: 100%;
+    height: 55px;
+    background: #d8dadb;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    z-index: 998;
+  }
+
+  .designed-strip p {
+    margin: 0;
+  }
+
+  .left {
+    flex: 1;
+  }
+
+  .center {
+    flex: 1;
+    text-align: center;
+    color: black;
+  }
+
+  .icon-right {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: flex-end; 
+    justify-content:end;
+    padding-right: 10px;
+  }
+
+  .icon-right button {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    background:white;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-right button:hover {
+    background: grey;
+  }
+  
+  .icon-right button span {
+    font-size: 17px;
+    font-weight: 400;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #1e73be;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-sizing: border-box;
+    z-index: 999;
+  }
+
+  .footer-left {
+    flex: 1;
+  }
+
+  .footer-center {
+    flex: 1;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  
+  }
+
+  .dev-text {
+    color: white;
+    font-size: 16px;
+    line-height: 1;
+    margin-top: 15px;
+    padding-right: 30px;
+  }
+
+  .nic-logo {
+    width: 230px;
+    height: 85px;
+    padding: 5px;
+  }
+
+  .itms-logo{
+    padding-top: 10px;
+    width:120px;
+    height: 80px;
+  }
+}
